@@ -1,0 +1,67 @@
+/* INDEX.CSS — chapter-selection page */
+
+.index-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+}
+
+.index-container {
+  width: min(100%, 760px);
+  text-align: center;
+}
+
+.index-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 18px;
+
+  width: max-content;
+  max-width: 100%;
+
+  margin: 0 auto 30px;
+
+  white-space: nowrap;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.index-title--scarlet {
+  font-family: "Ferro Rosso", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.8vw, 3.5rem);
+}
+
+.index-title--separator {
+  font-family: "Formula1 Display", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
+}
+
+.index-title--bull {
+  font-family: "Futura", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.8vw, 3.5rem);
+}
+
+.index-intro {
+  margin-bottom: 34px;
+}
+
+.chapter-link {
+  display: inline-block;
+  padding: 15px 24px;
+  border: 2px solid #111111;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.chapter-link:hover {
+  background: #111111;
+  color: #ffffff;
+  transform: translateY(-2px);
+}

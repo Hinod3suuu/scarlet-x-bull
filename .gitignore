@@ -1,0 +1,9 @@
+# Local font files - excluded from public repository
+fonts/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/

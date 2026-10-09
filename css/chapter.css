@@ -1,0 +1,206 @@
+/* CHAPTER.CSS — shared reading layout for every chapter */
+
+.site-header {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+  padding: 28px 0 18px;
+  text-align: center;
+}
+
+.story-title {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.story-title--scarlet {
+  font-family: "Ferro Rosso", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.story-title--separator {
+  font-family: "Formula1 Display", sans-serif;
+  font-weight: 700;
+  margin: 0 8px;
+}
+
+.story-title--bull {
+  font-family: "Futura", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.story-title:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.chapter-page {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.chapter-header {
+  padding: 72px 0 56px;
+  text-align: center;
+}
+
+.chapter-number {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.chapter-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+
+.chapter-content {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+
+.scene p {
+  margin: 0 0 1.35em;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+}
+
+.display-line,
+.closing-line,
+.final-line {
+  font-weight: 700;
+}
+
+.display-line {
+  margin: 34px 0 !important;
+  text-align: center;
+  font-size: clamp(1.15rem, 2.3vw, 1.55rem) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+
+.closing-line {
+  margin-top: 30px !important;
+  text-align: center;
+}
+
+.final-line {
+  margin-top: 48px !important;
+  text-align: center;
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem) !important;
+}
+
+.chapter-image {
+  margin: 48px 0;
+}
+
+.chapter-image--wide {
+  width: min(100vw - 40px, 920px);
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.chapter-image img {
+  width: 100%;
+  background: #ffffff;
+}
+
+.chapter-image figcaption {
+  margin-top: 10px;
+  color: #666666;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.dialogue,
+.broadcast-quote {
+  margin: 34px 0;
+  padding: 0;
+  border: 0;
+}
+
+.dialogue p,
+.broadcast-quote p {
+  margin-bottom: 0.75em;
+  font-weight: 400;
+}
+
+.dialogue p:last-child,
+.broadcast-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.broadcast-quote {
+  text-align: center;
+}
+
+.scene-break {
+  width: 72px;
+  margin: 72px auto;
+  border: 0;
+  border-top: 2px solid #111111;
+}
+
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 72px;
+  padding-top: 28px;
+  border-top: 1px solid #d8d8d8;
+}
+
+.chapter-navigation a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.chapter-navigation a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+@media (max-width: 600px) {
+  .site-header,
+  .chapter-page {
+    width: min(100% - 28px, 920px);
+  }
+
+  .site-header {
+    padding-top: 20px;
+  }
+
+  .chapter-header {
+    padding: 54px 0 42px;
+  }
+
+  .scene p {
+    font-size: 1rem;
+  }
+
+  .chapter-image {
+    margin: 36px 0;
+  }
+
+  .chapter-image--wide {
+    width: 100vw;
+  }
+
+  .scene-break {
+    margin: 56px auto;
+  }
+
+  .chapter-navigation {
+    flex-direction: column;
+  }
+}
