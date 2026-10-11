@@ -27,6 +27,7 @@
   text-transform: none;
   letter-spacing: 0;
   line-height: 1.2;
+  animation: title-arrive 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .index-title--scarlet {
@@ -50,19 +51,75 @@
 .index-intro {
   font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
   margin-bottom: 34px;
+  animation: content-arrive 650ms ease-out 250ms both;
 }
 
+/* A black racing-stripe fill sweeps across the chapter button on hover. */
 .chapter-link {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: inline-block;
   padding: 15px 24px;
   border: 2px solid #111111;
+  background: #ffffff;
+  color: #111111;
   text-decoration: none;
   font-weight: 700;
-  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease;
+  transition: color 300ms ease, transform 250ms ease;
+  animation: content-arrive 650ms ease-out 450ms both;
 }
 
-.chapter-link:hover {
+.chapter-link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
   background: #111111;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.chapter-link:hover,
+.chapter-link:focus-visible {
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+}
+
+.chapter-link:hover::before,
+.chapter-link:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.chapter-link:active {
+  transform: translateY(0);
+}
+
+.chapter-link:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 4px;
+}
+
+@keyframes title-arrive {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes content-arrive {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .index-title,
+  .index-intro,
+  .chapter-link {
+    animation: none;
+  }
+
+  .chapter-link,
+  .chapter-link::before {
+    transition: none;
+  }
 }
