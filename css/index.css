@@ -101,6 +101,13 @@
   outline-offset: 4px;
 }
 
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 @keyframes title-arrive {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }

@@ -252,10 +252,6 @@
   }
 }
 
-/* ========================================
-   STAGE 3 — READING PROGRESS
-   ======================================== */
-
 .reading-progress {
   position: fixed;
   top: 0;
@@ -266,11 +262,6 @@
   z-index: 9999;
   pointer-events: none;
 }
-
-
-/* ========================================
-   STAGE 3 — IMAGE REVEALS
-   ======================================== */
 
 .chapter-image {
   opacity: 0;
@@ -285,11 +276,6 @@
   opacity: 1;
   translate: 0 0;
 }
-
-
-/* ========================================
-   ACCESSIBILITY
-   ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .chapter-image {
