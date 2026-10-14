@@ -8,26 +8,51 @@
 }
 
 .index-container {
-  width: min(100%, 760px);
+  width: min(100%, 1600px);
   text-align: center;
 }
 
-.index-title {
+.index-poster {
   display: flex;
-  align-items: baseline;
   justify-content: center;
-  gap: 18px;
+  align-items: center;
 
-  width: max-content;
-  max-width: 100%;
+  width: 100%;
+  margin: 0 auto 40px;
+}
 
-  margin: 0 auto 30px;
+.index-poster img {
+  display: block;
 
-  white-space: nowrap;
-  text-transform: none;
-  letter-spacing: 0;
-  line-height: 1.2;
-  animation: title-arrive 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .index-poster img {
+    max-width: 260px;
+  }
+
+  .index-poster {
+    margin-bottom: 25px;
+  }
+}
+
+.index-poster img {
+  display: block;
+
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+
+  object-fit: contain;
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .index-title--scarlet {
@@ -54,7 +79,6 @@
   animation: content-arrive 650ms ease-out 250ms both;
 }
 
-/* A black racing-stripe fill sweeps across the chapter button on hover. */
 .chapter-link {
   position: relative;
   isolation: isolate;
@@ -128,5 +152,13 @@
   .chapter-link,
   .chapter-link::before {
     transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-title {
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 8px;
   }
 }
