@@ -89,21 +89,31 @@ Red Bull simply picked it up.**
 ```text
 scarlet-x-bull/
 ├── chapters/
-│   └── chapter-01-the-announcement.html
+│   └── chapter-XX-title.html
 ├── css/
 │   ├── chapter.css
 │   ├── global.css
 │   └── index.css
 ├── images/
+│   ├── chapter-XX/
+│   └── poster-image/
+├── js/
+│   └── chapter.js
 ├── .gitignore
 ├── index.html
 ├── LICENSE
 └── README.md
 ```
 
-The `chapters/` directory contains individual story chapters, while the `css/` directory manages the website's styling and page layouts.
+The `chapters/` directory contains individual HTML pages for each chapter, following a consistent naming convention.
 
-The `images/` directory contains visual storytelling assets, including fictional motorsport media graphics and supporting illustrations.
+The `css/` directory manages the website's typography, styling, and responsive layouts.
+
+The `images/` directory contains chapter-specific illustrations, fictional motorsport media graphics, and promotional artwork.
+
+The `js/` directory contains JavaScript functionality for chapter navigation, reading progress, and interactive elements.
+
+Chapter filenames and image directories follow a consistent numbering system, allowing new chapters to be added without changing the overall project structure.
 
 Locally stored font files are excluded from version control due to third-party licensing restrictions.
 
